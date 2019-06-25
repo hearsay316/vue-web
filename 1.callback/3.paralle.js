@@ -4,7 +4,7 @@ let fs = require('fs');
 function after(times,callback){ // 满足一点就是高阶函数
     let result = {};
     return function(key,data){ // promise.all
-        result[key] = data
+        result[key] = data;
         if(--times===0){
             callback(result);
         }

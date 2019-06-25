@@ -1,0 +1,14 @@
+{
+  "name": "xue-npm",
+  "version": "1.0.0",
+  "description": "这个是一个学习的例子",
+  "main": "main.js",
+  "bin": {
+    "handsome": "./entry.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
