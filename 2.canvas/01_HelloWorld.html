@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>canvas</title>
+	<style>
+		html,body{
+			margin:0;
+			padding: 0;
+		}
+		canvas{
+			border:1px solid red
+		}
+	</style>
+</head>
+<body>
+<canvas width="600" height="400" id="myCanvas"></canvas>
+<script>
+	const myCanvas = document.querySelector("#myCanvas");
+	let ctx = myCanvas.getContext("2d");
+	ctx.fillRect(200,200,100,100);
+</script>
+</body>
+</html>
