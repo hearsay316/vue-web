@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<canvas width="600" height="400" id="myCanvas"></canvas>
+<script>
+	const myCanvas = document.querySelector("#myCanvas");
+	let ctx = myCanvas.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(100,100);
+ctx.lineTo(300,300);
+ctx.lineTo(500,200);
+ctx.closePath(); //闭合
+	ctx.strokeStyle = "red";
+	ctx.fillStyle = 'red';
+	ctx.fill();
+ctx.stroke();
+</script>
+</body>
+</html>
