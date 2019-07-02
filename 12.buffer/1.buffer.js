@@ -41,9 +41,8 @@ Buffer.prototype.split = function(sep){
   let arr = [];
   let current;
   while (-1!==(current = this.indexOf(sep,pos))) {
-
   	arr.push(this.slice(pos,current));
-	  pos = len+current;
+	pos = len+current;
   }
   arr.push(this.slice(pos));
   return arr;
