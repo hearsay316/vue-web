@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #myCanvas{
+            border:1px solid gray;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+<script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.js"></script>
+<script>
+    const myCanvas = document.querySelector('#myCanvas');
+    let ctx = myCanvas.getContext("2d");
+    ctx.strokeRect(100,100,300,40);
+    axios.get("https://www.mxnzp.com/api/lottery/ssq/aim_lottery?expect=2018135").then((res)=>{
+        console.log(res);
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+     /*   h2+p{
+            background: red;
+        }
+        div~p{
+            background: red;
+        }*/
+        p:target{
+            background: red;
+        }
+      /*  input:required{
+            outline:2px solid red
+        }*/
+    /* input:optional{
+         outline:2px solid red
+     }*/
+        input[type="email"]:valid{
+            border-color:green;
+        }
+        input[type="email"]:invalid{
+            border-color:red
+        }
+    </style>
+
+
+</head>
+<body>
+<h2>555</h2>
+<div>3344</div>
+<p >这个是第一个</p>
+<p>这个是第一个</p><div>3344</div>
+<p>这个是第一个</p>
+<label for="fild-name">Name:</label>
+<input type="text" id="#field-name" class="field-name" required />
+<input type="text" >
+<input type="email" >
+<script>
+
+</script>
+</body>
+</html>
