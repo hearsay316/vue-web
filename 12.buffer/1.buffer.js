@@ -34,18 +34,18 @@ console.log(arr,newArr);
 
 let buffer6 = Buffer.from("珠峰架构珠峰架构珠峰架构珠峰架构珠峰架构珠峰架构");
 
-Buffer.prototype.split = function(sep){
-	console.log(this.indexOf(sep));
-	let pos = 0;
-	let len = Buffer.from(sep).length;
-  let arr = [];
-  let current;
-  while (-1!==(current = this.indexOf(sep,pos))) {
-  	arr.push(this.slice(pos,current));
-	pos = len+current;
-  }
-  arr.push(this.slice(pos));
-  return arr;
+Buffer.prototype.split = function (sep) {
+    console.log (this.indexOf (sep));
+    let pos = 0;
+    let len = Buffer.from (sep).length;
+    let arr = [];
+    let current;
+    while (-1 !== (current = this.indexOf (sep, pos))) {
+        arr.push (this.slice (pos, current));
+        pos = len + current;
+    }
+    arr.push (this.slice (pos));
+    return arr;
 };
 let arr1 = buffer6.split("珠峰");
 console.log(arr1.toString());

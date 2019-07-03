@@ -22,8 +22,10 @@ Buffer.concat = function(list,totalLength = list.reduce((a,b)=>(a+b.length),0)){
 let buffer = Buffer.alloc(totalLength);
 let offset = 0;
 list.forEach(buff=>{
+    console.log(buff);
     buff.copy(buffer,offset);
     offset+=buff.length;
 })
+    return buffer;
 };
-console.log (Buffer.concat ([buffer1, buffer2],177).toString());
+console.log (Buffer.concat([buffer1, buffer2]).toString());
