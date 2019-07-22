@@ -1,6 +1,6 @@
 // fs.open  fs.read 读文件 和写文件
-let  fs = require('fs');
-let path = require('path');
+let fs = require ('fs');
+let path = require ('path');
 // let buffer = Buffer.alloc(3);
 // flags 对文件的擦欧总类型 W r + s
 /*fs.open (path.resolve (__dirname, 'age.txt'), 'r', 0o666, (err, df) => {
@@ -11,6 +11,7 @@ let path = require('path');
         })
     }
 );*/
+
 /*
 let buffer2 = Buffer.from("珠峰");
 fs.open(path.resolve(__dirname,'./name.txt'),'r+',(err,fd)=>{
@@ -19,30 +20,33 @@ fs.open(path.resolve(__dirname,'./name.txt'),'r+',(err,fd)=>{
         console.log(written);
     })
 });*/
-function copy(source,target){
-    let buffer = Buffer.alloc(3);
-    let pos = 0;
-    fs.open(source,'r',(err,rfd)=>{
-        fs.open(target,'w',(err,wfd)=>{
-            function next(){
-                fs.read(rfd,buffer,0,3,pos,(err,bytesRead)=>{
-                    if(bytesRead>0){
-                        pos+=bytesRead;
-                        fs.write(wfd,buffer,0,bytesRead,(err,written)=>{
-                            next();
-                        })
-                    }else {
-                        console.log('结束了');
-                        fs.close(rfd,()=>{});
-                        fs.close(wfd,()=>{});
-                    }
 
+function copy(source, target) {
+    let buffer = Buffer.alloc (10000);
+    let pos = 0;
+    fs.open (source, 'r', (err, rfd) => {
+        fs.open (target, 'w', (err, wfd) => {
+            function next() {
+                fs.read (rfd, buffer, 0, 3, pos, (err, bytesRead) => {
+                    if (bytesRead > 0) {
+                        pos += bytesRead;
+                        fs.write (wfd, buffer, 0, bytesRead, (err, written) => {
+                            next ();
+                        })
+                    } else {
+                        console.log ('结束了');
+                        fs.close (rfd, () => {
+                        });
+                        fs.close (wfd, () => {
+                        });
+                    }
                 })
             }
-            next();
+
+            next ();
         })
     })
 }
 
 
-copy(path.resolve(__dirname,'./name.txt'),path.resolve(__dirname,'./age.txt'));
+copy (path.resolve (__dirname, './name.txt'), path.resolve (__dirname, './age.txt'));

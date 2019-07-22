@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+   /* let n = 1;
+    if(!(n in window)){
+        let n = 10;
+    }
+    console.log(n);*/
+   let n = 10,m = 30;
+   ~function (n,m) {
+       console.log(n);
+       let a = arguments;
+       a[0] = 2;
+       console.log(n,m);
+
+   }(m)
+</script>
+</body>
+</html>
