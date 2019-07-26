@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let socket = new WebSocket('ws://localhost:8888');
+   socket.onopen = function () {
+       console.log("客户端连接成功");
+       socket.send("hello")
+   }
+   socket.onmessage = function (event) {
+       console.log("收到服务器发来的消息",event.data);
+   }
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        ul,ol{
+            list-style:none;
+        }
+        .clearfix:after{
+            content: " "; /* 1 */
+            display: table; /* 2 */
+            clear: both;
+        }
+        .oTab {
+            width: 300px;
+            margin: 20px auto;
+        }
+        .oTab li{
+            width: 100px;
+            border: 1px solid red;
+            text-align: center;
+            float: left;
+        }
+        .content{
+            width: 600px;
+            border: 1px solid red;
+            margin: 8px auto;
+        }
+        .content div{
+            display: none;
+        }
+       .active{
+           display:block!important;
+       }
+    </style>
+</head>
+<body>
+<ul class="oTab clearfix" id="app">
+    <li>第一个</li>
+    <li>第二个</li>
+    <li>第三个</li>
+</ul>
+<div class="content" id="content">
+    <div class="active">第一个内容</div>
+    <div>第2个内容</div>
+    <div>第3个内容</div>
+</div>
+<script>
+    const app = document.getElementById("app");
+    const tabList = app.getElementsByTagName("li");
+    const content = document.getElementById("content");
+
+    const contentList = content.getElementsByTagName("div");
+    console.log(contentList);
+    for (let i = 0; i < tabList.length; i++) {
+        tabList[i].index = i;
+        tabList[i].onclick = function () {
+            contentList[this.index].className = "active";
+            Array.from(tabList).forEach((item,index,arr)=>{
+                console.log(index===this.index);
+                if(index !== this.index){
+                    contentList[index].className = "";
+                }
+            })
+
+        }
+    }
+
+
+    
+</script>
+</body>
+</html>

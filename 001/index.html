@@ -2,9 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0
+        }
+        ul,ol{
+            list-style:none;
+        }
+        .app{
+            width: 500px;
+            margin: 20px auto;
+        }
+        .app li {
+            line-height: 30px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .app li:nth-of-type(1){
+         border-top:1px solid red ;
+        }
+        .app li:nth-of-type(odd){
+            border-left:1px solid red ;
+            border-right: 1px solid red;
+            color: red;
+        }
+        .app li:nth-of-type(even){
+            border:1px solid red;
+            color: #1d35ff;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        .app li:hover{
+            color: aquamarine;
+        }
+    </style>
 </head>
 <body>
-<script src="00.1.js"></script>
+    <ul class="app" id="app">
+        <li>第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个</li>
+        <li>第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个</li>
+        <li>第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个</li>
+        <li>第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个</li>
+        <li>第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个</li>
+        <li>第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个第一个</li>
+    </ul>
+    <script>
+        const app = document.getElementById('app');
+        const liLists = app.getElementsByTagName('li');
+        for (let i = 0; i < liLists.length; i++) {
+          liLists[i].onclick = function () {
+              confirm(i);
+          }
+        }
+    </script>
 </body>
 </html>

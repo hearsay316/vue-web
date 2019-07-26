@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="clock">
+</div>
+
+<iframe src="/clock" style="display: none"></iframe>
+<script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.js"></script>
+<script>
+    // const  clock = document.getElementById("clock");
+    // function send() {
+    //     axios.get('/clock').then((res)=>{
+    //         clock.innerText = res.data;
+    //     }).finally(()=>{
+    //         send();
+    //     })
+    // }
+    // send();
+
+
+  setInterval (() => {
+        console.log (1);
+    },10000);
+</script>
+</body>
+</html>
