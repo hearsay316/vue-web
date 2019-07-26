@@ -9,7 +9,7 @@ app.get("/clock", function (req, res) {
 <script type="text/javascript">
 parent.document.getElementById('clock').innerText = "${data}";
 </script>
-        
+       
                  `)
     },16)
 });
