@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+我有一个禁用了自动完成功能的表单，但它不起作用，并且会在Firefox和更高版本的Chrome中启用自动完成功能
+
+<form method="post" autocomplete="off" action="/user">
+    <ul class="field-set">
+        <li>
+            <label>Username:</label>
+            <input type="text" name="acct" id="username" maxlength="100" size="20">
+        </li>
+        <li>
+            <label>Password:</label>
+            <input type="password" name="pswd" id="password" maxlength="16" size="20" >
+        </li>
+        <li>
+            <input type="submit" class="button" value="Login" id="Login" name="Login">
+        </li>
+    </ul>
+</form>
+<script>
+    let a = document.createElement("div");
+    let obj  = {
+        a:[],
+        b:undefined,
+        c:function () {
+        },
+    };
+
+if(obj&&obj.a&&obj.a.length){
+    console.log(true);
+}else {
+    console.log(false);
+}
+if(obj.a.length||obj.a||obj){
+    console.log(22);
+}
+</script>
+</body>
+</html>
