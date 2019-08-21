@@ -616,7 +616,7 @@ let city_list= {
 };
 let arr = [],p ,c,d={};
 Object.values (city_list).forEach (item => {
-    p = pinyin.getFullChars (item).toLocaleLowerCase ().slice (0, 1);
+    p = pinyin.getFullChars (item.name).toLocaleLowerCase ().slice (0, 1);
     c = p.charCodeAt (0);
     if (c > 96 && c < 123) {
         if (!d[p]) {
