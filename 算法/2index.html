@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #app{
+            width: 350px;
+            height: 155px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .app_desc{
+            width: 1800px;
+            margin-left: -20px;
+        }
+        .desc{
+            width: 150px;
+            height: 150px;
+            float: left;
+            border:1px solid red
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="app_desc" ref="app_desc">
+        <div class="desc" v-for="(item,index ) in desc">
+            {{item.class}}
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+<script>
+    let app = new Vue({
+        el:'#app',
+        data:{
+            desc:[{index:4,class:"第一"},{index:5,class:"第2"},{index:6,class:"第3"},{index:7,class:"第4"},{index:7,class:"第5"}]
+        },
+        methods:{
+            marginLeft(){
+                this.$refs.app_desc.style.marginLeft
+            }
+        },
+        mounted() {
+            var add = 0;
+            this.desc.push(...this.desc);
+            setInterval(()=>{
+               add-=0.5;
+               if(Math.abs(add)===750*2){
+                   add=0;
+                   this.desc = [{index:4,class:"第一"},{index:5,class:"第2"},{index:6,class:"第3"},{index:7,class:"第4"},{index:7,class:"第5"}];
+               }
+
+                if(Math.abs(add)===750){
+                    this.desc.push(...this.desc);
+                }
+
+              //  this.desc.push(...this.desc);
+              this.$refs.app_desc.style.marginLeft=add+'px';
+            },10)
+        }
+    })
+</script>
+</body>
+</html>
