@@ -1,11 +1,11 @@
 # Created by .ignore support plugin (hsz.mobi)
 /ZF-note.iml
 /.idea/
-/算法/node_modules/
-/算法/.vscode/
+/old/算法/node_modules/
+/old/算法/.vscode/
 /13.fs/name.txt
 /13.fs/age.txt
 /age.txt
 /a.txt
 /name.txt
-/14.websocket/node_modules/
+/old/14.websocket/node_modules/
