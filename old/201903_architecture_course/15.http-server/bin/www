@@ -1,0 +1,32 @@
+#! /usr/bin/env node
+console.log('hello world 123'); 
+
+// 1）需要生成一个pacakge.json
+// 2) 需要配置bin命令
+// 3) 在运行的文件中 增加  #! /usr/bin/env node 表示用node来执行文件
+
+
+// commander 专门处理当前命令行中执行的命令携带的参数
+let version = require('../package.json').version;
+let program = require('commander')
+// 执行某个命令 执行对应的操作
+program.command('rmdir <dir> [otherDirs...]')
+.action(function (dir, otherDirs) {
+    console.log('git clone');
+});
+let parser = program
+    .option('-p, --port <p>','set http-server port')
+    .option('-d, --dir <p>','set http-server directory')
+    .version(version)
+    .parse(process.argv);
+
+let config = {
+    port:8080,
+    dir:process.cwd()
+}
+config = {...config,...parser}
+
+let Server = require('../src/index');
+let server = new Server(config);
+server.start(); // 开启一个服务
+// 解析用户参数 (vue create xxxx)

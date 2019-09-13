@@ -1,0 +1,7 @@
+body{
+    background: red;
+}
+.cc {
+ color:yellow;
+ transform: rotateY(45deg);
+}

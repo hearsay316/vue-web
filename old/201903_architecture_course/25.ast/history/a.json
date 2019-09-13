@@ -1,0 +1,156 @@
+{
+  "type": "File",
+  "start": 0,
+  "end": 29,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 1,
+      "column": 29
+    }
+  },
+  "program": {
+    "type": "Program",
+    "start": 0,
+    "end": 29,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0
+      },
+      "end": {
+        "line": 1,
+        "column": 29
+      }
+    },
+    "sourceType": "module",
+    "interpreter": null,
+    "body": [
+      {
+        "type": "ImportDeclaration",
+        "start": 0,
+        "end": 29,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 29
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportDefaultSpecifier",
+            "start": 7,
+            "end": 8,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 7
+              },
+              "end": {
+                "line": 1,
+                "column": 8
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 7,
+              "end": 8,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 7
+                },
+                "end": {
+                  "line": 1,
+                  "column": 8
+                },
+                "identifierName": "_"
+              },
+              "name": "_"
+            }
+          },
+          {
+            "type": "ImportSpecifier",
+            "start": 10,
+            "end": 14,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 10
+              },
+              "end": {
+                "line": 1,
+                "column": 14
+              }
+            },
+            "imported": {
+              "type": "Identifier",
+              "start": 10,
+              "end": 14,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 10
+                },
+                "end": {
+                  "line": 1,
+                  "column": 14
+                },
+                "identifierName": "join"
+              },
+              "name": "join"
+            },
+            "importKind": null,
+            "local": {
+              "type": "Identifier",
+              "start": 10,
+              "end": 14,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 10
+                },
+                "end": {
+                  "line": 1,
+                  "column": 14
+                },
+                "identifierName": "join"
+              },
+              "name": "join"
+            }
+          }
+        ],
+        "importKind": "value",
+        "source": {
+          "type": "StringLiteral",
+          "start": 21,
+          "end": 29,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 21
+            },
+            "end": {
+              "line": 1,
+              "column": 29
+            }
+          },
+          "extra": {
+            "rawValue": "lodash",
+            "raw": "'lodash'"
+          },
+          "value": "lodash"
+        }
+      }
+    ],
+    "directives": []
+  },
+  "comments": []
+}
