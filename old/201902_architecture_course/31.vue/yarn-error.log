@@ -1,0 +1,36 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\test1\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Lenovo\Fingerprint Manager Pro\;D:\软件安装\Git\cmd;D:\软件安装\Git\mingw64\bin;D:\软件安装\Git\usr\bin;C:\Program Files\PuTTY\;C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;D:\MongoDB\bin;D:\qq\Bin;C:\Program Files\nodejs\;C:\Users\test1\AppData\Roaming\npm
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  11.13.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Users\test1\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:126002:13)
+      at Interface.emit (events.js:193:13)
+      at Interface._ttyWrite (readline.js:820:16)
+      at ReadStream.onkeypress (readline.js:184:10)
+      at ReadStream.emit (events.js:193:13)
+      at emitKeys (internal/readline.js:424:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1093:36)
+      at ReadStream.emit (events.js:193:13)
+      at addChunk (_stream_readable.js:296:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
