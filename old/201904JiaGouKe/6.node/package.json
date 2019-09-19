@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "commander": "^2.20.0"
+  },
+  "name": "6.node",
+  "version": "1.0.0",
+  "main": "1.start.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

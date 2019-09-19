@@ -1,0 +1,15 @@
+{
+  "name": "4.es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.reduce.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1"
+  }
+}

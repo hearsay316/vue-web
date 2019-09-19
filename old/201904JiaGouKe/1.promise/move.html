@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .ball1,.ball2,.ball3{
+            width: 100px;height: 100px;
+            background: red;
+            border-radius: 50%;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ball1"></div>
+    <div class="ball2"></div>
+    <div class="ball3"></div>
+</body>
+<script>
+    let $ = document.querySelector.bind(document);
+    // function move(ele,target,callback){
+    //     let start = ele.getBoundingClientRect().x;
+    //     function step(){
+    //         start+= 10;
+    //         ele.style.transform = `translateX(${start}px)`;
+    //         if(start<target){
+    //             requestAnimationFrame(step)
+    //         }else{
+    //             callback();
+    //         }
+    //     }
+    //     requestAnimationFrame(step)
+    // }
+    // move($('.ball1'),200,function(){
+    //     move($('.ball2'),500,function(){
+    //         move($('.ball3'),100,function(){
+
+    //         })
+    //     })
+    // });
+    function move(ele,target){
+        return new Promise((resolve,reject)=>{
+            let start = ele.getBoundingClientRect().x;
+            function step(){
+                start+= 10;
+                ele.style.transform = `translateX(${start}px)`;
+                if(start<target){
+                    requestAnimationFrame(step)
+                }else{
+                    resolve();
+                }
+            }
+            requestAnimationFrame(step)
+        })
+    }
+    // move($('.ball1'),200).then(data=>{
+    //     return move($('.ball2'),500)
+    // }).then(data=>{
+    //     return move($('.ball3'),500)
+    // })
+    // function * m(){
+    //     yield move($('.ball1'),200)
+    //     yield move($('.ball2'),500)
+    //     yield move($('.ball3'),500)
+    // }
+    // function co(it){
+    //     return new Promise((resolve,reject)=>{
+    //         function next(r){
+    //             let {value,done} = it.next(r);
+    //             if(done){
+    //                 resolve();
+    //             }else{
+    //                 value.then(data=>{
+    //                     next(data);
+    //                 },reject)
+    //             }
+    //         }
+    //         next()
+    //     })
+    // }
+    // co(m());
+    async function  m(){
+        await move($('.ball1'),200)
+        await move($('.ball2'),500)
+        await move($('.ball3'),500)
+    }
+    m();
+
+</script>
+</html>

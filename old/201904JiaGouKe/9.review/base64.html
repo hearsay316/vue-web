@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #drop{
+            background: red;
+            width: 200px;
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+    拖拽图片并实现预览
+    <div id="drop">
+
+    </div>
+
+    <script>
+        drop.addEventListener('dragover',function(e){
+            e.preventDefault();
+        })
+        drop.addEventListener('drop',function(e){
+            e.preventDefault();
+            let fileReader = new FileReader();
+            fileReader.readAsDataURL(e.dataTransfer.files[0]);
+            fileReader.onload = function(e){
+                let result = e.target.result;
+                let img = new Image();
+                img.src = result;
+                document.body.appendChild(img);
+            }
+        })
+    </script>
+</body>
+</html>

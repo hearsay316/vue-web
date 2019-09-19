@@ -1,0 +1,15 @@
+{
+  "name": "12.http",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "ejs": "^2.6.2",
+    "mime": "^2.4.4",
+    "yargs": "^13.2.4"
+  },
+  "bin": {
+    "static-server": "./bin/www.js"
+  }
+}
