@@ -1,0 +1,23 @@
+{
+  "name": "jiangwen-server",
+  "version": "0.0.2",
+  "description": "is a http-server",
+  "keywords": [
+    "server",
+    "http"
+  ],
+  "author": "jiang<1035465284@qq.com>",
+  "license": "MIT",
+  "bin": {
+    "jiangwen-server": "./bin/www"
+  },
+  "devDependencies": {
+    "commander": "^2.20.0"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "ejs": "^2.6.1",
+    "mime": "^2.4.3",
+    "mz": "^2.7.0"
+  }
+}

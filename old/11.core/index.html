@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-slot="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<div id="root">
+	<smart class="user" style="width:300px" :items=items :is-Ordered="isOrdered">
+		<template v-slot:foo>
+			first
+		</template>
+		<h1>1235</h1>
+	</smart>
+</div>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script>
+	let EmptyList='p';
+	let TableList='p';
+	let OrderedList='ul';
+	let UnorderedList='ol';
+	Vue.component('smart', {
+		functional: true,
+		props: {
+			items: {
+				type: Array,
+				required: true
+			},
+			isOrdered: Boolean
+		},
+		render: function (createElement, context) {
+			function appropriateListComponent () {
+				let items = context.props.items;
+console.log(context);
+				if (items.length === 0)           return EmptyList;
+				if (typeof items[0] === 'object') return TableList;
+			//	if (context.props.isOrdered)      return OrderedList;
+
+				return UnorderedList;
+			}
+			function appropriateListComponents () {
+			/*	let items = context.props.items;
+				console.log(context);
+				if (items.length === 0)           return EmptyList;
+				if (typeof items[0] === 'object') return TableList;
+				//	if (context.props.isOrdered)      return OrderedList;
+*/
+				return UnorderedList;
+			}
+
+			return createElement(
+					appropriateListComponent(),
+					context.data,
+					context.children,
+			)
+		}
+	})
+	var vm=new Vue({
+		el:'#root',
+		data:{
+			isOrdered:true,
+			items:[
+				{
+					name:'张三'
+				},
+				{
+					name:'李四'
+				}
+			]
+		}
+	});
+	const x = "1002";
+	console.log(typeof x);
+	console.log(typeof window.x);
+</script>
+<script>
+	console.log(typeof x);
+	console.log(typeof window.x);
+</script>
+</body>
+</html>

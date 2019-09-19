@@ -57,7 +57,7 @@ console.log (a === b.x);*/
 let obj = {
     a:1,
     b:2
-}
+};
 function func(obj) {
     obj.a = 2;
     obj  = [1,23,6];

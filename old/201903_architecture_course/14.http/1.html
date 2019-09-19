@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    hello
+    <script>
+        // let xhr = new XMLHttpRequest();
+        // xhr.open('get','/user',true);
+        // xhr.responseType = 'json';
+        //  xhr.setRequestHeader('A',1)
+        // xhr.onload = function(){
+        //     console.log(typeof xhr.response)
+        // }
+        // xhr.send();
+
+        // axios 不用封装 头的信息
+        // 5500 - 3003 跨域了 如果是复杂请求 会先发出预检
+        fetch('http://localhost:3003/user',{ // 底层自己封装ajax 
+            method:'put',
+            headers:{
+                a:1,
+                Authorization:'token=xxxxx'
+            }
+            // mode:'cors'
+        }).then(data=>{
+            return data.json()
+        }).then(data=>{
+            console.log(data);
+        }).catch(err=>{
+            console.log(err);
+        }) // 和ajax区别 支持promise的写法 他可以在子线程中使用
+
+        // 跨域： 协议 端口 域名
+    </script>
+</body>
+</html>

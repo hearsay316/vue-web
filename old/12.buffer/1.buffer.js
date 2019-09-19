@@ -1,7 +1,7 @@
 // 每个汉字 node 只支持uft-8的编码(一个汉字三个字节)  gbk一个汉字2个字节
 // 如果编码不一样就会出现很多乱码错误 iconv-lite模块 可以解决 node不支持 gbk的
 // 一个字节是由 8bit组成  8个二进制
-
+// buffer 3种方法  固定长度 ，固定内容
 let buffer = Buffer.alloc(5);
 console.log(buffer);
 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="file">
+    <script>
+        file.addEventListener('change',(e)=>{
+            let reader = new FileReader();
+            reader.readAsDataURL(e.target.files[0]);
+            reader.onload = function(){
+                //读取完毕后输出结果
+                let img = new Image();
+                img.src = this.result;
+                document.body.appendChild(img);
+            }
+        })
+
+    </script>
+</body>
+</html>

@@ -28,5 +28,5 @@ let cry = (thing)=>{
 //girl.off("这是",cry);
 
 girl.emit("这是",'被甩了');
-
+// terminal
 girl.emit("这是",'被甩了');

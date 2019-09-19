@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(1);
+        let channel = new MessageChannel();
+        let p1 = channel.port1
+        let p2 = channel.port2;
+
+
+        p1.postMessage('hello');
+        console.log(2);
+        p2.onmessage = function(e){
+            console.log(e.data);
+        }
+        console.log(3);
+    </script>
+</body>
+</html>
