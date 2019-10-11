@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>1.手动绘制一个webgl.html</title>
+  </head>
+  <body>
+    <!--
+  1 . 添加一个画布元素
+  2 . 获取上下文对象(基于webgl)
+  3 . 使用对象的api 方法实现图形的绘制
+  -->
+    <canvas id="cvs" width="200" height="200" style="border:1px solid red">
+      你的浏览器不支持画布元素
+    </canvas>
+    <script>
+      // 获取画布元素
+      const cvs = document.getElementById("cvs");
+      // 获取元素的上下文对象
+      const gl = cvs.getContext("webgl");
+      // 设置绘制图形的填充的颜色(保存到缓存)
+      gl.clearColor(1.0, 0.0, 0.0, 1.0);
+      // 调用缓存的值填充图形
+      gl.clear(gl.COLOR_BUFFER_BIT);
+    </script>
+  </body>
+</html>
