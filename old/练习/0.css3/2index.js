@@ -107,6 +107,25 @@ for(let i=0;i<A.length;i++){
 console.log (d);*/
 
 
+/*
 let arr = [{a:1},{a:2},{a:3}];
 let b = {a:4};
-console.log (JSON.stringify (arr).indexOf (JSON.stringify (b)));
+console.log (JSON.stringify (arr).indexOf (JSON.stringify (b)));*/
+
+
+// let obj = {a:14,b:{125:1254}};
+// obj = [obj];
+// console.log(obj);
+
+let a = [[1,2],[3,4]];
+
+
+function f(obj) {
+    return Array.prototype.concat.apply([],obj)
+}
+
+let name = "swdewd";
+let fun = function () {
+    console.log(this.name);
+};
+fun();
