@@ -21,10 +21,10 @@ function deepCopy(obj, hash = new WeakMap()) {
   }
 
   // 拷贝不可枚举属性,因为 allDesc 的 value 是浅拷贝，所以要放在前面
-  // result = Object.create(
-  //     Object.getPrototypeOf(result),
-  //     allDesc
-  // );
+  result = Object.create(
+      Object.getPrototypeOf(result),
+      allDesc
+  );
 
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) result[key] = deepCopy(obj[key], hash);
